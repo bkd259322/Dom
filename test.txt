@@ -1,0 +1,51 @@
+Question 1: Changing Text Content
+
+Create an HTML file with the following elements:
+
+A heading with the ID title.
+A paragraph with the ID description.
+A button with the ID changeTextButton.
+
+Write JavaScript code to:
+
+Change the text content of the heading to "Welcome to JavaScript!" when the page loads.
+Change the text content of the paragraph to "This is a practice exercise." when the page loads.
+Change the text content of both the heading and the paragraph to "Text Changed!" when the button is clicked.
+
+
+
+Question 2: Toggling Classes
+Create an HTML file with the following elements:
+
+A div with the ID box and the class box.
+A button with the ID toggleButton.
+Write JavaScript code to:
+
+Toggle a class active on the div with each click of the button. When the class is added, the background color of the div should change.
+
+Here is the CSS you can use:
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.active {
+    background-color: red;
+}
+
+
+
+Question 3: Displaying and Hiding Elements
+
+Create an HTML file with the following elements:
+
+A paragraph with the ID text.
+Two buttons with IDs showButton and hideButton.
+
+Write JavaScript code to:
+
+Hide the paragraph when the hideButton is clicked.
+Show the paragraph when the showButton is clicked.

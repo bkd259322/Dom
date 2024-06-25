@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <p id="text">This is a paragraph that can be shown or hidden.</p>
+    <button id="showButton">Show</button>
+    <button id="hideButton">Hide</button>
+
+    <script>
+      
+        function showParagraph() {
+            document.getElementById('text').style.display = "block";
+        }
+
+       
+        function hideParagraph() {
+            document.getElementById('text').style.display = "none";
+        }
+
+   
+        document.getElementById("showButton").onclick = showParagraph;
+        document.getElementById("hideButton").onclick = hideParagraph;
+    </script>
+</body>
+</html>
