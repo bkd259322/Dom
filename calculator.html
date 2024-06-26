@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.calculator {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.calculator input {
+    margin: 10px 0;
+    padding: 10px;
+    width: calc(100% - 22px);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+</style>
+<body>
+    <div class="calculator">
+        <input type="number" id="value1" placeholder="Enter first value">
+        <input type="number" id="value2" placeholder="Enter second value">
+        <div class="buttons">
+            <button onclick="calculate('add')">+</button>
+            <button onclick="calculate('subtract')">-</button>
+            <button onclick="calculate('multiply')">*</button>
+            <button onclick="calculate('divide')">/</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script>
+    function calculate(operation) {
+    const value1 = parseFloat(document.getElementById('value1').value);
+    const value2 = parseFloat(document.getElementById('value2').value);
+    let result;
+
+    if (isNaN(value1) || isNaN(value2)) {
+        alert('Please enter valid numbers');
+        return;
+    }
+
+    switch (operation) {
+        case 'add':
+            result = value1 + value2;
+            break;
+        case 'subtract':
+            result = value1 - value2;
+            break;
+        case 'multiply':
+            result = value1 * value2;
+            break;
+        case 'divide':
+            result = value1 / value2;
+            break;
+        default:
+            return;
+    }
+
+    document.getElementById('result').textContent = `Result: ${result}`;
+}
+
+</script>
+</html>
